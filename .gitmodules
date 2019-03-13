@@ -1,0 +1,3 @@
+[submodule "string-logic-testcases"]
+	path = string-logic-testcases
+	url = git@bitbucket.org:hip-sleek/string-logic-testcases.git
