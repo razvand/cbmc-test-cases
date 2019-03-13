@@ -1,0 +1,6 @@
+struct Node {
+  int val;
+  struct Node *next;
+};
+
+void do_something_with_node(struct Node *node);

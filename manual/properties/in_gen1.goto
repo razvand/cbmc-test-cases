@@ -1,0 +1,7 @@
+struct Complex {
+  double real;
+  double imag;
+};
+
+struct Complex AGlobalComplex;
+int do_something_with_complex(struct Complex *complex);
