@@ -20,3 +20,6 @@ binsearch: binsearch.c
 
 lock-example: lock-example.c
 	-cbmc --unwind 100 --bounds-check --unwinding-assertions $<
+
+lock-example-fixed: lock-example-fixed.c
+	-cbmc --unwind 100 --bounds-check --unwinding-assertions $<
