@@ -12,7 +12,9 @@ int main(void)
 	char name[32];
 
 	printf("Tell me your name: ");
+	__CPROVER_assume(stdout != NULL);
 	fflush(stdout);
+	__CPROVER_assume(stdout != NULL);
 	fgets(name, 64, stdin);
 	printf("Hello, %s", name);
 	return 0;
