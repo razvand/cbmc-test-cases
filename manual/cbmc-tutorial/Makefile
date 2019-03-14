@@ -15,7 +15,8 @@ file2: file2.c
 	-cbmc --function sum --bounds-check $<
 
 binsearch: binsearch.c
-	-cbmc --function binsearch --unwind 6 --bounds-check --unwinding-assertions $<
+	-cbmc --function binsearch --unwind 6 --bounds-check --unwinding-assertions $< # works
+	-cbmc --function binsearch --unwind 5 --bounds-check --unwinding-assertions $< # fails
 
 lock-example: lock-example.c
 	-cbmc --unwind 100 --bounds-check --unwinding-assertions $<
