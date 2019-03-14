@@ -20,3 +20,12 @@ buffers: buffers.c
 loop: loop.c loop_multiple_vars.c
 	-/usr/bin/time -v cbmc loop.c > /dev/null
 	-/usr/bin/time -v cbmc loop_multiple_vars.c > /dev/null
+
+list: list.c
+	-cbmc --function list_search_item --bounds-check --pointer-check --unwind 50 $<
+
+loop_infinite: loop_infinite.c
+	-cbmc --unwind 1000 --unwinding-assertions $<
+
+recursive: recursive.c
+	-cbmc --function fibonacci --unwind 7 --unwinding-assertions $<
