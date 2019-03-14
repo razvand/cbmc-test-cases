@@ -15,4 +15,4 @@ buffers: buffers.c
 	-cbmc --function data --bounds-check $<
 	-cbmc --function stack --bounds-check $<
 	-cbmc --function stack_dynamic --bounds-check $<
-	-cbmc --function heap --bounds-check $<
+	-cbmc --function heap --bounds-check --pointer-check $<
