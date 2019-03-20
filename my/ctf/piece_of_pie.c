@@ -14,7 +14,8 @@ int main(void)
 	printf("Tell me your name: ");
 	__CPROVER_assume(stdout != NULL);
 	fflush(stdout);
-	__CPROVER_assume(stdout != NULL);
+	__CPROVER_assume(stdin != NULL);
+	assert(__CPROVER_buffer_size(name) > 64);
 	fgets(name, 64, stdin);
 	printf("Hello, %s", name);
 	return 0;
