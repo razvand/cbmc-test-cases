@@ -130,3 +130,66 @@ size_t list_get_size(struct int_list *head)
 {
 	return list_size;
 }
+
+int main2(void)
+{
+	struct int_list l;
+
+	list_init_head(&l);
+	list_add_item(&l, 10);
+	list_add_item(&l, 11);
+	list_add_item(&l, 12);
+	list_add_item(&l, 13);
+	list_add_item(&l, 14);
+	list_remove_item(&l, 11);
+
+	return 0;
+}
+
+int main3(void)
+{
+	struct int_list l;
+
+	list_init_head(&l);
+	list_add_item(&l, 10);
+	list_add_item(&l, 11);
+	list_add_item(&l, 12);
+	list_add_item(&l, 13);
+	list_add_item(&l, 14);
+	list_remove_item(&l, 20);
+
+	return 0;
+}
+
+int main4(void)
+{
+	struct int_list l;
+
+	list_add_item(&l, 10);
+
+	return 0;
+}
+
+int main5(void)
+{
+	struct int_list l;
+
+	list_remove_item(&l, 10);
+
+	return 0;
+}
+
+int main(void)
+{
+	struct int_list l;
+
+	list_init_head(&l);
+	list_add_item(&l, 10);
+	list_add_item(&l, 11);
+	list_add_item(&l, 12);
+	list_add_item(&l, 13);
+	list_add_item(&l, 14);
+	list_search_item(&l, 15);
+
+	return 0;
+}

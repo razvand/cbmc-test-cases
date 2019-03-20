@@ -23,6 +23,12 @@ loop: loop.c loop_multiple_vars.c
 
 list: list.c
 	-cbmc --function list_search_item --bounds-check --pointer-check --unwind 50 $<
+	-cbmc --function list_remove_item --bounds-check --pointer-check --unwind 50 $<
+	-cbmc --function main --bounds-check --pointer-check --unwind 10 $<
+	-cbmc --function main2 --bounds-check --pointer-check --unwind 10 $<
+	-cbmc --function main3 --bounds-check --pointer-check --unwind 10 $<
+	-cbmc --function main4 --bounds-check --pointer-check --unwind 10 $<
+	-cbmc --function main5 --bounds-check --pointer-check --unwind 10 $<
 
 loop_infinite: loop_infinite.c
 	-cbmc --unwind 1000 --unwinding-assertions $<
