@@ -35,3 +35,6 @@ loop_infinite: loop_infinite.c
 
 recursive: recursive.c
 	-cbmc --function fibonacci --unwind 7 --unwinding-assertions $<
+
+assume_assert: assume_assert.c
+	-cbmc $<
